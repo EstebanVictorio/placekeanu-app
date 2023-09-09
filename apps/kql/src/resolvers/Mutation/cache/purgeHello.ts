@@ -5,21 +5,16 @@ export const purgeHello = async (
   _,
   __,
   { cache }: Context<Cache>,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => {
   let result = false
-  const invalidation = 
-    cache.invalidate([
-      { typename: "Hello" },
-    ]) as Promise<void>
+  const invalidation = cache.invalidate([
+    { typename: "Hello" },
+  ]) as Promise<void>
 
-  await invalidation
-    .then(() => {
-      result = true
-    })
-
+  await invalidation.then(() => {
+    result = true
+  })
 
   return result
 }
-
-

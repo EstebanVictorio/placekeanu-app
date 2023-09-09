@@ -10,18 +10,12 @@
     "paths": {
       "resolvers/*": ["resolvers/*"]
     },
-    "typeRoots": [
-      "node_modules/@types",
-      "src/@types"
-    ],
+    "typeRoots": ["node_modules/@types", "src/@types"]
   },
   "ts-node": {
     "files": true,
     "compilerOptions": {
-      "typeRoots": [
-        "node_modules/@types",
-        "src/@types"
-      ]
+      "typeRoots": ["node_modules/@types", "src/@types"]
     }
   }
 }

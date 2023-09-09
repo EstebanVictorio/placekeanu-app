@@ -1,5 +1,3 @@
 import { hello } from "./hello.js"
 
-export {
-  hello,
-}
+export { hello }

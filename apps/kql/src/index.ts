@@ -6,8 +6,8 @@ import { loadSchemaSync } from "@graphql-tools/load"
 import * as Query from "./resolvers/Query/index.js"
 import path from "path"
 import { default as RedisNamespace } from "ioredis"
-import Keyv from "keyv";
-import { KeyvAdapter } from "@apollo/utils.keyvadapter";
+import Keyv from "keyv"
+import { KeyvAdapter } from "@apollo/utils.keyvadapter"
 import responseCachePlugin from "@apollo/server-plugin-response-cache"
 import KeyvRedis from "@keyv/redis"
 import * as dotenv from "dotenv"
@@ -20,7 +20,9 @@ const env = process.env.NODE_ENV || "local"
 const envPath = path.resolve(root, `.env.${env}`)
 dotenv.config({ path: envPath })
 
-const schemaFromFile = loadSchemaSync(schemaPath, { loaders: [new GraphQLFileLoader()] })
+const schemaFromFile = loadSchemaSync(schemaPath, {
+  loaders: [new GraphQLFileLoader()],
+})
 
 const schema = addResolversToSchema({
   schema: schemaFromFile,
@@ -31,15 +33,14 @@ const schema = addResolversToSchema({
 
 const { Redis } = RedisNamespace
 
-const redis =
-  new Redis({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT ? parseInt(process.env.REDIS_PORT, 10) : 6379,
-    password: process.env.REDIS_PASSWORD,
-  }).on('error', (error) => {
-    console.log('[Error on Cache]:', error)
-    process.exit(1)
-  })
+const redis = new Redis({
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT ? parseInt(process.env.REDIS_PORT, 10) : 6379,
+  password: process.env.REDIS_PASSWORD,
+}).on("error", error => {
+  console.log("[Error on Cache]:", error)
+  process.exit(1)
+})
 
 const store = new KeyvRedis(redis)
 
@@ -49,10 +50,8 @@ const server = new ApolloServer({
   schema,
   cache,
   introspection: true,
-  plugins: [
-    responseCachePlugin()
-  ],
-});
+  plugins: [responseCachePlugin()],
+})
 
 ;(async () => {
   const { url } = await startStandaloneServer(server, {

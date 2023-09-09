@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
 import path from "path"
-
 
 const root = path.resolve("src")
 
@@ -17,6 +16,6 @@ export default defineConfig({
       blocks: `${root}/components`,
       pages: `${root}/components`,
       store: `${root}/store`,
-    }
-  }
+    },
+  },
 })
