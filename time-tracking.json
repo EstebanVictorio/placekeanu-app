@@ -19,7 +19,9 @@
     { "title": "Working on Apollo Server timeout issue to Cache in Docker", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished connecting Docker containers", "time": { "amount": 25, "unit": "minutes" } },
 
-    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 25, "unit": "minutes" } }
+    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished boilerplate commit and started adding lint", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Configuring lint", "time": { "amount": 25, "unit": "minutes" } }
     
   ],
   "breaks": [
@@ -42,7 +44,9 @@
     { "title": "Still attempting to connect containers in Docker network", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished connecting Docker containers", "time": { "amount": 15, "unit": "minutes" } },
 
-    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 5, "unit": "minutes" } }
+    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished boilerplate commit and started adding lint", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Configuring lint", "time": { "amount": 5, "unit": "minutes" } }
 
   ]
 }
