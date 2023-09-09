@@ -1,0 +1,2 @@
+FROM docker.dragonflydb.io/dragonflydb/dragonfly
+CMD ["dragonfly", "--logtostderr", "--requirepass=81p3su28u18","--cache_mode=true", "-dbnum" ,"1", "--port", "6379", "--save_schedule", "*:30", "--maxmemory=12gb", "--keys_output_limit=12288", "--dbfilename","dump.rdb", "--nodf_snapshot_format"]
