@@ -1,4 +1,0 @@
-{
-  "*.+(js|ts|tsx|json)": ["eslint"],
-  "**/*.+(js|json|ts|tsx)": ["prettier"]
-}
