@@ -1,0 +1,48 @@
+{
+  "pomodoros": [
+    { "title": "start initial boilerplate code", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "set up minimal GQL server", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "configuring DragonflyDB", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "finished setting up DragonflyDB", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Extending GraphQL context with Envelop", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Removing Envelop, Fall back to Apollo Server Cache Strategy implementation w/ DragonflyDB", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Splitting GraphQL files", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Looking for Docker Networking docs for container", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Creating Dockerfile for KQL", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Attempting to recreate kql app in Container", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Still Attempting to recreate kql app in Container", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished yarn installation, checking lockfile content", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Compiling build in Docker", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finishing setting up TS build process", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Working in Docker network to communicate Apollo Server with Cache", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Still attempting to connect containers in Docker network", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Working on Apollo Server timeout issue to Cache in Docker", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished connecting Docker containers", "time": { "amount": 25, "unit": "minutes" } },
+
+    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 25, "unit": "minutes" } }
+    
+  ],
+  "breaks": [
+    { "title": "start initial boilerplate code", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "set up minimal GQL server", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "configuring DragonflyDB", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "finished setting up DragonflyDB", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Extending GraphQL context with Envelop", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Removing Envelop, Fall back to Apollo Server Cache Strategy implementation w/ DragonflyDB", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Splitting GraphQL files", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Looking for Docker Networking docs for container", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Creating Dockerfile for KQL", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Attempting to recreate kql app in Container", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Still Attempting to recreate kql app in Container", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished yarn installation, checking lockfile content", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Compiling build in Docker", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Finishing setting up TS build process", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Working in Docker network to communicate Apollo Server with Cache", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Still attempting to connect containers in Docker network", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Still attempting to connect containers in Docker network", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished connecting Docker containers", "time": { "amount": 15, "unit": "minutes" } },
+
+    { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 5, "unit": "minutes" } }
+
+  ]
+}

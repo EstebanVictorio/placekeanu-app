@@ -1,0 +1,28 @@
+version: '3.7'
+networks:
+  net:
+    driver: bridge
+    external: false
+    name: net
+
+services:
+  kql:
+    build: apps/kql
+    ports:
+      - "8000:8000"
+    networks:
+      - net
+    depends_on:
+      - kql-cache
+    links:
+      - kql-cache
+    environment:
+      REDIS_HOST: kql-cache
+      REDIS_PORT: 6379
+
+  kql-cache:
+    build: packages/kql-cache
+    networks:
+      - net
+    ports:
+      - "6379:6379"

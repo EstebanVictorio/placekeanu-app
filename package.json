@@ -1,0 +1,28 @@
+{
+  "name": "placekeanu-app",
+  "packageManager": "yarn@3.6.1",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "kql:dev": "yarn workspace kql dev",
+    "kql:add": "yarn workspace kql add --exact",
+    "kql:build": "yarn workspace kql compile",
+    "kql:start": "yarn workspace kql start",
+    "kql:remove": "yarn workspace kql remove",
+    "kql:docker:build": "sh ./scripts/docker/build/kql.sh",
+    "kql:docker:run": "sh ./scripts/docker/run/kql.sh",
+
+    "cache:docker:build": "sh ./scripts/docker/build/kql-cache.sh",
+    "cache:docker:run": "sh ./scripts/docker/run/kql-cache.sh",
+
+    "got-keanu:dev": "yarn workspace got-keanu dev",
+    "got-keanu:add": "yarn workspace got-keanu add --exact",
+    "got-keanu:build": "yarn workspace got-keanu build",
+    "got-keanu:deploy": "yarn workspace got-keanu build",
+
+    "upheaval": "sh ./scripts/pipe/upheaval.sh"
+  }
+}

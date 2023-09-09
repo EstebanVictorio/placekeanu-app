@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDirs": ["src"],
+    "outDir": "dist",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "resolvers/*": ["resolvers/*"]
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+  },
+  "ts-node": {
+    "files": true,
+    "compilerOptions": {
+      "typeRoots": [
+        "node_modules/@types",
+        "src/@types"
+      ]
+    }
+  }
+}
