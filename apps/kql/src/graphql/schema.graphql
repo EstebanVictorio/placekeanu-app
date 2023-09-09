@@ -9,7 +9,17 @@ directive @cacheControl(
   inheritMaxAge: Boolean
 ) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
 
+type KeanuResult {
+  svg: String!
+  url: String!
+}
 
 type Query {
   hello: String! @cacheControl(maxAge: 10, scope: PUBLIC)
+  keanu(
+    width: Int = 200,
+    height: Int,
+    young: Boolean,
+    grayscale: Boolean
+  ): KeanuResult! @cacheControl(maxAge: 3600, scope: PUBLIC)
 }

@@ -1,3 +1,4 @@
 import { hello } from "./hello.js"
+import { keanu } from "./keanu.js"
 
-export { hello }
+export { hello, keanu }
