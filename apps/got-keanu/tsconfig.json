@@ -5,6 +5,22 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "src/@types"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "pages/*": ["pages/*"],
+      "layouts/*": ["layouts/*"],
+      "components/*": ["components/*"],
+      "blocks/*": ["blocks/*"],
+      "store/*": ["store/*"],
+      "gql-client/*": ["gql-client/*"],
+      "constants/*": ["constants/*"],
+      "utils/*": ["utils/*"],
+      "hooks/*": ["hooks/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
