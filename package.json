@@ -2,6 +2,7 @@
   "name": "placekeanu-app",
   "packageManager": "yarn@3.6.1",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*",
     "apps/*"
@@ -19,9 +20,11 @@
     "cache:docker:build": "sh ./scripts/docker/build/kql-cache.sh",
     "cache:docker:run": "sh ./scripts/docker/run/kql-cache.sh",
     "got-keanu:dev": "yarn workspace got-keanu dev",
+    "got-keanu:genql": "yarn workspace got-keanu genql",
     "got-keanu:add": "yarn workspace got-keanu add --exact",
     "got-keanu:build": "yarn workspace got-keanu build",
-    "got-keanu:deploy": "yarn workspace got-keanu build",
+    "got-keanu:tw:init": "yarn workspace got-keanu tw:init",
+    "got-keanu:deploy": "yarn workspace got-keanu deploy",
     "got-keanu:lint": "yarn workspace got-keanu lint",
     "got-keanu:format": "yarn workspace got-keanu format",
     "upheaval": "sh ./scripts/pipe/upheaval.sh"

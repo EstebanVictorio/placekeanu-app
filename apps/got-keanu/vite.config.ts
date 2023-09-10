@@ -13,9 +13,14 @@ export default defineConfig({
   resolve: {
     alias: {
       components: `${root}/components`,
-      blocks: `${root}/components`,
-      pages: `${root}/components`,
+      blocks: `${root}/blocks`,
+      pages: `${root}/pages`,
+      layouts: `${root}/layouts`,
       store: `${root}/store`,
+      hooks: `${root}/hooks`,
+      utils: `${root}/utils`,
+      'gql-client': `${root}/gql-client`,
+      'constants': `${root}/constants`,
     },
   },
 })

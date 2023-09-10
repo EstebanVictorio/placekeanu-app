@@ -21,8 +21,27 @@
     { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished boilerplate commit and started adding lint", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Configuring lint", "time": { "amount": 25, "unit": "minutes" } },
-    { "title": "Finished linting, adding keanu resolver", "time": { "amount": 25, "unit": "minutes" } }
-    
+    { "title": "Finished linting, adding keanu resolver", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Adding GenQL to run queries", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished adding GenQL to run queries", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Added Redux Store to the app", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Building Saga to fetch a single entity", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished building saga for a single entity", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Starting to implement single entity saga", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished implementing single entity saga", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Implementing route params for different entities", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Creating form to fetch new entity", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished form to fetch new entity", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Adding navigation between pages", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished Adding navigation between pages and starting to implement action for new entity form", "time": { "amount": 25, "unit": "minutes" } },
+
+    { "title": "Updating loader for single entity fetch to sagas shape", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished updating loader for single entity fetch to sagas shape and added localStorage gallery", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Working on Gallery component", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished Gallery component", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished implementing single entity form submit", "time": { "amount": 25, "unit": "minutes" } }
+
   ],
   "breaks": [
     { "title": "start initial boilerplate code", "time": { "amount": 5, "unit": "minutes" } },
@@ -46,7 +65,25 @@
     { "title": "Finished setup to start Apollo Server and Cache", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished boilerplate commit and started adding lint", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Configuring lint", "time": { "amount": 5, "unit": "minutes" } },
-    { "title": "Finished linting, adding keanu resolver", "time": { "amount": 15, "unit": "minutes" } }
-
+    { "title": "Finished linting, adding keanu resolver", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Adding GenQL to run queries", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished adding GenQL to run queries", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Added Redux Store to the app", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Building Saga to fetch a single entity", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Still building single entity saga", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Finished building saga for a single entity", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Starting to implement single entity saga", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished implementing single entity saga", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Implementing route params for different entities", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Creating form to fetch new entity", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished form to fetch new entity", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Adding navigation between pages", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished Adding navigation between pages and starting to implement action for new entity form", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Updating loader for single entity fetch to sagas shape", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished updating loader for single entity fetch to sagas shape and added localStorage gallery", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Working on Gallery component", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished Gallery component", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished implementing single entity form submit", "time": { "amount": 5, "unit": "minutes" } }
   ]
 }
