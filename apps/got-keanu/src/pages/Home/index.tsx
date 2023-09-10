@@ -8,33 +8,33 @@ const randomCap200AtLeast100 = () => Math.floor(Math.random() * 201) + 100
 const Home = () => {
   return (
     <Section>
-      <Card className="p-12 gap-y-8">
-        <h1 className="text-5xl text-center">
+      <Card className="p-4 xl:p-12 gap-y-8">
+        <h1 className="text-lg md:text-5xl text-center">
           Welcome to the Keanu Reeves Gallery app!
         </h1>
-        <div className="flex gap-x-4">
+        <div className="flex flex-wrap gap-4">
           <Button
             as={Link}
-            variant="bordered"
-            color="primary"
             to="/keanus"
-            className="w-1/3 hover:text-white hover:border-white"
+            color="primary"
+            variant="bordered"
+            className="flex-grow flex-shrink hover:text-white hover:border-white !p-2"
           >
               Go to Gallery
           </Button>
           <Button
             as={Link}
             color="default"
+            className="flex-grow flex-shrink whitespace-pre-wrap text-center !p-2"
             to={`/keanus/${randomCap200AtLeast100()}x${randomCap200AtLeast100()}`}
-            className="w-1/3 whitespace-pre-wrap text-center"
           >
-              Add random image
+              Add Random image
           </Button>
           <Button
             as={Link}
             color="primary"
             to="/keanus/new"
-            className="w-1/3 whitespace-pre-wrap text-center"
+            className="flex-grow flex-shrink basis-full lg:basis-auto whitespace-pre-wrap text-center !p-2"
           >
               Add new image
           </Button>
