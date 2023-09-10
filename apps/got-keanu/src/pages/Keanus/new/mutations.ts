@@ -21,6 +21,6 @@ export const newKeanuMutation: Mutation<typeof imageSchema> = ({
         ? parseInt(height, 10)
         : undefined,
   }
-  console.log("newKeanuMutation", payload)
+
   return dispatch(actions.loadingKeanu(payload))
 }

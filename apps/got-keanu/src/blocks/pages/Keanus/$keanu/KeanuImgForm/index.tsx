@@ -33,6 +33,7 @@ const KeanuImgForm = () => {
             <Checkbox value="y" name="young" />
           </label>
         </div>
+        <p>Note: Some images will be restricted in size.</p>
         <div className="flex flex-wrap xl:flex-nowrap gap-4 mt-12">
           <Button
             as={Link}
