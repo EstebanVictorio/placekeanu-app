@@ -21,7 +21,7 @@ export const createAction = <T extends ObjectShape>({ schema, mutation }: {
     }, {} as Record<string, string>)
 
     const result = safeParse(schema, data)
-    console.log("data:", data)
+
     if(result.success) {
       return mutation(data as Required<Input<typeof schema>>)
     }

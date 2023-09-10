@@ -34,13 +34,14 @@ const KeanuImg = ({
       <Image
         src={keanu.url}
         alt="A handsome Keanu"
-        className="object-contain w-full"
+        className="max-h-[300px]"
         classNames={{
-          wrapper: "!max-w-full w-full"
+          wrapper: "object-contain !w-full !max-w-none flex justify-center",
+          img: "!max-w-[240px] md:!max-w-[700px] lg:!max-w-[800px]"
         }}
       />
       <figcaption
-        className="px-4 bottom-0 w-full bg-black text-white z-20 text-small flex flex-col text-center"
+        className="p-4 bottom-0 w-full bg-black text-white z-20 text-small flex flex-col text-center rounded-md"
       >
           <span>
             Look at

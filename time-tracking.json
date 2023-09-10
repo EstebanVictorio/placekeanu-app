@@ -40,7 +40,8 @@
     { "title": "Finished Gallery component", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished implementing single entity form submit", "time": { "amount": 25, "unit": "minutes" } },
-    { "title": "Tuning styles a little bit", "time": { "amount": 25, "unit": "minutes" } }
+    { "title": "Tuning styles a little bit", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished tuning up styles and Adding README.md instructions", "time": { "amount": 25, "unit": "minutes" } }
 
   ],
   "breaks": [
@@ -85,6 +86,7 @@
     { "title": "Finished Gallery component", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished implementing single entity form submit", "time": { "amount": 5, "unit": "minutes" } },
-    { "title": "Tuning styles a little bit", "time": { "amount": 5, "unit": "minutes" } }
+    { "title": "Tuning styles a little bit", "time": { "amount": 15, "unit": "minutes" } }
+    { "title": "Finished tuning up styles and Adding README.md instructions", "time": { "amount": 5, "unit": "minutes" } }
   ]
 }
