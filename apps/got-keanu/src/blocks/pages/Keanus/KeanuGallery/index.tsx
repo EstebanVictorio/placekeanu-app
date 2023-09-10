@@ -7,6 +7,8 @@ interface Props {
   gallery: KeanuImg[]
 }
 
+const baseStrokeUtils = "w-12 h-12 hidden xl:block"
+
 const KeanuGallery = ({ gallery }: Props) => {
   const ref = useRef<HTMLUListElement>(null)
   const [leftStroke, setLeftStroke] = useState(false)
@@ -59,19 +61,19 @@ const KeanuGallery = ({ gallery }: Props) => {
   }
 
   const leftStrokeClassName = clsx(
-    "w-12 h-12",
+    baseStrokeUtils,
     leftStroke && "border border-solid border-primary-500 rounded-md"
   )
 
   const rightStrokeClassName = clsx(
-    "w-12 h-12",
+    baseStrokeUtils,
     rightStroke && "border border-solid border-primary-500 rounded-md"
   )
 
   return (
     <div className="w-full flex gap-x-4 items-center justify-center">
       <Kbd className={leftStrokeClassName}>←</Kbd>
-      <ul ref={ref} className="scroll-smooth w-[224px] h-[200px] flex overflow-x-auto rounded-md p-4 snap-x snap-mandatory gap-x-3">
+      <ul ref={ref} className="scroll-smooth w-[202px] h-[200px] flex overflow-x-auto rounded-md p-4 snap-x snap-mandatory gap-x-3">
         {gallery.map(item => (
           <li
             key={item?.svg}

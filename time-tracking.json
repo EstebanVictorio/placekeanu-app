@@ -34,13 +34,13 @@
     { "title": "Finished form to fetch new entity", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Adding navigation between pages", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished Adding navigation between pages and starting to implement action for new entity form", "time": { "amount": 25, "unit": "minutes" } },
-
     { "title": "Updating loader for single entity fetch to sagas shape", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished updating loader for single entity fetch to sagas shape and added localStorage gallery", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Working on Gallery component", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished Gallery component", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 25, "unit": "minutes" } },
-    { "title": "Finished implementing single entity form submit", "time": { "amount": 25, "unit": "minutes" } }
+    { "title": "Finished implementing single entity form submit", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Tuning styles a little bit", "time": { "amount": 25, "unit": "minutes" } }
 
   ],
   "breaks": [
@@ -84,6 +84,7 @@
     { "title": "Working on Gallery component", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished Gallery component", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished fixing Gallery style issues and finished implementing fetch single entity form", "time": { "amount": 5, "unit": "minutes" } },
-    { "title": "Finished implementing single entity form submit", "time": { "amount": 5, "unit": "minutes" } }
+    { "title": "Finished implementing single entity form submit", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Tuning styles a little bit", "time": { "amount": 5, "unit": "minutes" } }
   ]
 }
