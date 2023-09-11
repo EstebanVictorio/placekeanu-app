@@ -15,6 +15,7 @@ type KeanuAction = {
 
 type ErrorPayload = {
   error: string
+  code: string
 }
 
 type KeanuGallery = {

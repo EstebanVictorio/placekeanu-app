@@ -1,6 +1,7 @@
 import { client } from "gql-client/client"
 import { QueryGenqlSelection } from "gql-client/generated/schema"
 
+
 export type Args =
   Required<QueryGenqlSelection>['keanu']['__args']
 

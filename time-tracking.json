@@ -43,7 +43,11 @@
     { "title": "Tuning styles a little bit", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished tuning up styles and Adding README.md instructions", "time": { "amount": 25, "unit": "minutes" } },
     { "title": "Finished tuning up styles once more and finished adding README.md instructions", "time": { "amount": 25, "unit": "minutes" } },
-    { "title": "Added minor details on README.md instructions, adding error handling and checking form validation once more", "time": { "amount": 25, "unit": "minutes" } }
+    { "title": "Added minor details on README.md instructions, adding error handling and checking form validation once more", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Finished adding error handling and update minor README.md details", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Adding minor details on action error handling", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Making valibot actions bypassable with valibot issues as errors argument in mutation", "time": { "amount": 25, "unit": "minutes" } },
+    { "title": "Added error handling when service is not available", "time": { "amount": 25, "unit": "minutes" } }
   ],
   "breaks": [
     { "title": "start initial boilerplate code", "time": { "amount": 5, "unit": "minutes" } },
@@ -90,6 +94,10 @@
     { "title": "Tuning styles a little bit", "time": { "amount": 15, "unit": "minutes" } },
     { "title": "Finished tuning up styles and Adding README.md instructions", "time": { "amount": 5, "unit": "minutes" } },
     { "title": "Finished tuning up styles once more and finished adding README.md instructions", "time": { "amount": 5, "unit": "minutes" } },
-    { "title": "Added minor details on README.md instructions, adding error handling and checking form validation once more", "time": { "amount": 5, "unit": "minutes" } }
+    { "title": "Added minor details on README.md instructions, adding error handling and checking form validation once more", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Finished adding error handling and update minor README.md details", "time": { "amount": 15, "unit": "minutes" } },
+    { "title": "Adding minor details on action error handling", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Making valibot actions bypassable with valibot issues as errors argument in mutation", "time": { "amount": 5, "unit": "minutes" } },
+    { "title": "Added error handling when service is not available", "time": { "amount": 5, "unit": "minutes" } }
   ]
 }

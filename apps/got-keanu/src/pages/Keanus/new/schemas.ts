@@ -16,7 +16,7 @@ export const imageSchema = object({
   width: optional(
     coerce(
       number([
-        integer(),
+        integer("Width must be an integer"),
       ]),
       Number,
     )
@@ -24,7 +24,7 @@ export const imageSchema = object({
   height:
     coerce(
       number([
-        integer(),
+        integer("Height must be an integer"),
       ]),
       Number
     ),

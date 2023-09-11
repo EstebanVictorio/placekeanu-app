@@ -56,7 +56,7 @@ const KeanuGallery = ({ gallery }: Props) => {
 
   if (gallery.length === 0) {
     return (
-      <p>You have no Keanu images stored. Shame :(</p>
+      <p>You have no Keanu images stored. Shame :c</p>
     )
   }
 
@@ -76,7 +76,7 @@ const KeanuGallery = ({ gallery }: Props) => {
       <ul ref={ref} className="scroll-smooth w-[202px] h-[200px] flex overflow-x-auto rounded-md p-4 snap-x snap-mandatory gap-x-3">
         {gallery.map(item => (
           <li
-            key={item?.svg}
+            key={item?.url}
             className="!basis-[200px] max-h-[200px] !flex-grow !flex-shrink-0 snap-center"
           >
               <Image

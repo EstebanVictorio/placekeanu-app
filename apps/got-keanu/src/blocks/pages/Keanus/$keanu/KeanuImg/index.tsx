@@ -23,9 +23,15 @@ const KeanuImg = ({
     )
   }
 
-  if (!keanu) {
+  if (status === Status.ERROR) {
     return (
       <p>This Keanu failed to load. Sad feelings only :(</p>
+    )
+  }
+
+  if (!keanu) {
+    return (
+      <p>This version of Keanu does not exist yet.</p>
     )
   }
 
