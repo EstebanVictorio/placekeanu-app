@@ -1,4 +1,4 @@
-import { string, regex, enumType, object, optional, literal } from "valibot"
+import { string, regex, enumType, number, object, optional, integer, coerce, boolean } from "valibot"
 
 export const dimensionsSchema =
   string([
@@ -13,15 +13,31 @@ export const photoEffectsSchema = enumType([
 ])
 
 export const imageSchema = object({
-  width: string(),
+  width: optional(
+    coerce(
+      number([
+        integer(),
+      ]),
+      Number,
+    )
+  ),
   height:
-    optional(
-      string()
+    coerce(
+      number([
+        integer(),
+      ]),
+      Number
     ),
   young: optional(
-    literal("y")
+    coerce(
+      boolean(),
+      (value) => value === "y",
+    ),
   ),
   grayscale: optional(
-    literal("g")
+    coerce(
+      boolean(),
+      (value) => value === "g",
+    ),
   ),
 })

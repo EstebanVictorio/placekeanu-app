@@ -17,6 +17,7 @@ services:
     links:
       - kql-cache
     environment:
+      API_URL: https://placekeanu.com
       REDIS_HOST: kql-cache
       REDIS_PORT: 6379
       REDIS_PASSWORD: 81p3su28u18

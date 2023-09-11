@@ -5,4 +5,5 @@ import { newKeanuMutation as mutation } from "./mutations"
 export const newKeanuAction = createAction({
   schema,
   mutation,
+  dev: import.meta.env.DEV,
 })

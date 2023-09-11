@@ -1,11 +1,12 @@
-import { ObjectSchema, ObjectShape, safeParse, Input } from "valibot"
+import { ObjectSchema, ObjectShape, safeParse, Output } from "valibot"
 import { ActionFunctionArgs } from "react-router-dom"
 
-export type Mutation<S extends ObjectSchema<any>> = (input: Required<Input<S>>) => unknown
+export type Mutation<S extends ObjectSchema<any>> = (safeMutationInput: Output<S>) => unknown
 
-export const createAction = <T extends ObjectShape>({ schema, mutation }: {
+export const createAction = <T extends ObjectShape>({ schema, mutation, dev = true }: {
   schema: ObjectSchema<T>,
   mutation: Mutation<ObjectSchema<T>>
+  dev?: boolean
 }) => {
   return async ({ request }: ActionFunctionArgs) => {
     const formData = await request.clone().formData()
@@ -23,7 +24,10 @@ export const createAction = <T extends ObjectShape>({ schema, mutation }: {
     const result = safeParse(schema, data)
 
     if(result.success) {
-      return mutation(data as Required<Input<typeof schema>>)
+      if(dev) {
+        console.log(result.output)
+      }
+      return mutation(result.output)
     }
 
     throw new Error("Invalid data")

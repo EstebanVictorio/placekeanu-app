@@ -13,13 +13,10 @@ export const newKeanuMutation: Mutation<typeof imageSchema> = ({
   
   const { dispatch } = store
   const payload: PayloadAction<ValidKeanuImgInput>['payload'] = {
-    width: parseInt(width, 10),
-    grayscale: grayscale === "g",
-    young: young === "y",
-    height:
-      height
-        ? parseInt(height, 10)
-        : undefined,
+    width,
+    height,
+    grayscale,
+    young,
   }
 
   return dispatch(actions.loadingKeanu(payload))

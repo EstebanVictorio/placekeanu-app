@@ -12,6 +12,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      assets: `${root}/assets`,
       components: `${root}/components`,
       blocks: `${root}/blocks`,
       pages: `${root}/pages`,

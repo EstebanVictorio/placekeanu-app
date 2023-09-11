@@ -6,7 +6,7 @@
 ### Installation Prerequisites:
 
 - Node.js (18.15.0 and onwards)
-- Yarn (stable version, not classic)
+- Yarn (stable version, not classic, see [instructions](https://yarnpkg.com/getting-started/install) for how to set stable version)
 - Docker (Daemon and Compose)
 
 
@@ -18,24 +18,7 @@ This project is a monorepo to keep all codebases in the same repository.
 
 Once your prerequisites are in place, you can proceed to the apps:
 
-#### Frontend
-
-1. Install dependencies by running `yarn` inside the project repo.
-
-2. After that, you have to create an `.env.local` environment variable file:
-
-- File `apps/got-keanu/.env.local` with the following content:
-
-```
-GRAPHQL_URL="http://localhost:8000"
-```
-
-3. Finally, after those steps are in place, you can run `yarn got-keanu:dev` from the root of the project repo folder to make the project available at the following url: `http://localhost:3000`. Please keep in mind that for the frontend app to fully work, you'll need to follow the steps in the **Backend** session. Otherwise, you'll be prompted to error pages in the **Frontend** app.
-
-
-
 #### Backend
-
 
 This one should be pretty straightforward:
 
@@ -61,10 +44,27 @@ REDIS_PORT="6379"
 REDIS_PASSWORD="81p3su28u18"
 ```
 
+#### Frontend
+
+1. Install dependencies by running `yarn` inside the project repo.
+
+2. After that, you have to create an `.env.local` environment variable file:
+
+- File `apps/got-keanu/.env.local` with the following content:
+
+```
+GRAPHQL_URL="http://localhost:8000"
+```
+
+3. Make sure to run `yarn got-keanu:genql` to generate [GenQL client](https://genql.dev/) for Backend fetch operations to be enabled in the frontend.
+
+4. Finally, after those steps are in place, you can run `yarn got-keanu:dev` from the root of the project repo folder to make the project available at the following url: `http://localhost:3000`. Please keep in mind that for the frontend app to fully work, you'll need to follow the steps in the **Backend** session. Otherwise, you'll be prompted to error pages in the **Frontend** app.
 
 
 ### Future improvements and features
 
 - Possibly decoupled the cache from the backend so, if for any reason cache is not available, at least not interrupt the service, but this might be debatable, so, leaving as dependency for now.
 
-- Probably add a MinIO instance to lengthen the cache period of the images, so instead of hitting the API by using images URLs, provide the requests with the URL from the MinIO bucket.
+- Probably add a MinIO instance to lengthen the cache period of the images, so instead of hitting the API by using images URLs, provide the requests with the URL from the images stored in the MinIO bucket.
+
+- Add the GenQL client generation to scripts for CI processes rather than generating it manually.
