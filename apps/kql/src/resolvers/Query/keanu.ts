@@ -14,6 +14,7 @@ export const keanu = async (
   ___: unknown,
   ____: GraphQLResolveInfo
 ) => {
+  console.log("info",____)
   const { width, height, young, grayscale } = args
 
   let urlPath = `/${width}`

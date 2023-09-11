@@ -1,16 +1,19 @@
 import { createSlice, type PayloadAction, } from "@reduxjs/toolkit"
 import { type RootState } from "../index"
 import { Status } from "constants/index"
+import { type Code } from "error-nmspc/codes"
 
 export type State = {
   keanu: Maybe<KeanuImg>
   status: keyof typeof Status
-  error: Maybe<Error>
+  error: Maybe<string>
+  errorCode: Maybe<Code>
 }
 
 const initialState: State = {
   keanu: null,
   error: null,
+  errorCode: null,
   status: Status.IDLE
 }
 
@@ -27,7 +30,8 @@ const keanu = createSlice({
     },
     failedKeanu: (state, action: PayloadAction<ErrorPayload>) => {
       state.status = Status.ERROR
-      state.error = new Error(action.payload.error)
+      state.error = action.payload.error
+      state.errorCode = action.payload.code as Code
     },
     successKeanu: (state, action:PayloadAction<KeanuImg>) => {
       state.keanu = action.payload
@@ -43,6 +47,7 @@ export { actions }
 export const selectors = {
   selectKeanuStatus: (state: RootState) => state.keanu.status,
   selectKeanu: (state: RootState) => state.keanu.keanu,
+  selectError: (state: RootState) => ({ message: state.keanu.error, code: state.keanu.errorCode }),
 }
 
 export default reducer

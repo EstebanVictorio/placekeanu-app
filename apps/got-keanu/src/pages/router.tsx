@@ -7,11 +7,14 @@ import { loader as newKeanuLoader } from "./Keanus/new/loader"
 import { newKeanuAction } from "./Keanus/new/actions"
 import Keanus from "./Keanus"
 import { loader as keanuLoader } from "./Keanus/$keanu/loader"
+import ErrorBoundary from "./Error/Boundary"
+import NotFound from "./Error/40X/404"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Base />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,
@@ -33,6 +36,10 @@ const router = createBrowserRouter([
         action: newKeanuAction,
       },
     ]
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   }
 ])
 

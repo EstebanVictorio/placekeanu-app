@@ -12,11 +12,13 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      assets: `${root}/assets`,
       components: `${root}/components`,
       blocks: `${root}/blocks`,
       pages: `${root}/pages`,
       layouts: `${root}/layouts`,
       store: `${root}/store`,
+      'error-nmspc': `${root}/error-nmspc`,
       hooks: `${root}/hooks`,
       utils: `${root}/utils`,
       'gql-client': `${root}/gql-client`,

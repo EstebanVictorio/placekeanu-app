@@ -3,7 +3,7 @@ type Maybe<T> = T | null | undefined
 type KeanuImg = Maybe<{ url: string, svg: string }>
 
 type ValidKeanuImgInput = {
-  width: number
+  width?: number
   height?: number
   grayscale?: boolean
   young?: boolean
@@ -15,6 +15,7 @@ type KeanuAction = {
 
 type ErrorPayload = {
   error: string
+  code: string
 }
 
 type KeanuGallery = {
