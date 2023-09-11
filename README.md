@@ -34,11 +34,15 @@ This one should be pretty straightforward:
   dragonfly --logtostderr --requirepass=81p3su28u18 --cache_mode=true -dbnum 1 --port 6379 --save_schedule *:30 --maxmemory=12gb --keys_output_limit=12288 --dbfilename dump.rdb --nodf_snapshot_format
 ```
 
-- Otherwise, create a Docker network called `net` via the following command:
+- Otherwise, create a Docker network called `net` via any of the following command:
 
 
 ```
   docker network create net
+  
+  # or...
+
+  yarn network:create
 ```
 
 And then run the following commands:
@@ -59,7 +63,31 @@ REDIS_PORT="6379"
 REDIS_PASSWORD="81p3su28u18"
 ```
 
-- Finally, if you followed these steps, run `yarn kql:dev` from the root of the project repo folder and that will make the Apollo Server available at `http://localhost:8000`
+- Now, you have two options:
+
+  - Running the Apollo Server on your machine directly via the following:
+  Run `yarn kql:dev` from the root of the project repo folder and that will make the Apollo Server available at `http://localhost:8000`.
+
+  - Running the Apollo Server on your machine via Docker. This is a bit longer:
+
+    - Since the Apollo Server is on Docker, the approach taken here is to create the `net` network. As per Docker Docs, is not recommended for apps to rely on the default network, so for this scenario we have to communicate both container services through it. So, this is has a longer chore list to be done:
+
+      - For this, you need to ensure to have created the cache in a container, and inspect its IP Address in the `net` network.
+
+      - Once you see it, copy it and pass it as an env var to the command in the `scripts/docker/run/kql.sh` bash script file so when you run it, the container recognizes it as an env var inside the Apollo Server for the cache host.
+
+      - This is usually not a problem, but, depending on how you attempted to run the code, you might just want to pass all the required env vars (`REDIS_HOST`, `REDIS_PASSWORD`, `REDIS_PORT`, `API_URL`) if you by any chance run the local machine command first, and then transitioned to the container way to do it. If this was the case, you might only need to pass the `REDIS_HOST` from the previous step to the command in the aforementioned script
+      and that's it.
+
+      - Then, build the Apollo server container image with the appropriate env vars using the the following command from the root of the project repo folder: `yarn kql:docker:build`
+
+      - Now, you can run the Apollo Server using the following command from the root of the project repo folder: `yarn kql:docker:run`
+
+      - A brief explanation to this is that I tested several ways to run this, and added the `dotenv` dependency just as a fast way to test stuff in the host environment before loading everything into a container, so, `REDIS_HOST` might get in the way if you explored this path.
+
+Depending on which method you'd like to follow, is how you might end up running all the services, but to keep it brief, we'll leave it at that. If you have a better way to do it, please do so! I'm also open to hear some suggestions.
+
+As a side note: one way that is not explored here in these instructions is if you had the cache outside of a container, but the Apollo Server did was in a container.
 
 #### Frontend
 

@@ -27,6 +27,7 @@
     "got-keanu:deploy": "yarn workspace got-keanu deploy",
     "got-keanu:lint": "yarn workspace got-keanu lint",
     "got-keanu:format": "yarn workspace got-keanu format",
+    "network:create": "sh ./scripts/docker/network/create.sh",
     "upheaval": "sh ./scripts/pipe/upheaval.sh"
   },
   "devDependencies": {
