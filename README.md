@@ -37,9 +37,12 @@ Once your prerequisites are in place, you can proceed to the apps:
 GRAPHQL_URL="http://localhost:8000"
 ```
 
-3. Run `yarn got-keanu:genql` to generate [GenQL client](https://genql.dev/) for Backend fetch operations to be enabled in the frontend from **the root of the project repo folder**.
+3. Run `yarn workspace got-keanu genql` to generate [GenQL client](https://genql.dev/) for Backend fetch operations to be enabled in the frontend from **the root of the project repo folder** while the backend is up. This process reads the GraphQL schema from the backend to generate the operations needed in the frontend.
 
-4. Finally, after those steps are in place, you can run `yarn got-keanu:dev` from **the root of the project repo folder** to make the project available at the following url: `http://localhost:3000`.
+4. Finally, after those steps are in place, you can run `yarn workspace got-keanu dev` from **the root of the project repo folder** to make the project available at the following url: `http://localhost:3000`.
+
+
+Important note: Make sure you established Yarn Stable version instead of classic one. The main difference you'll notice is that if you run `yarn -v`, for `classic`, you'll get something like `1.2x.x`, while `berry`, `stable` and `latest` all go from `2.x.x` and onwards. Current one is `3.6.x` (which goes for `stable` IIRC).
 
 
 ### Future improvements and features
