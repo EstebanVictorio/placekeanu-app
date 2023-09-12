@@ -1,0 +1,30 @@
+version: '3.7'
+networks:
+  net:
+    driver: bridge
+    external: false
+    name: net
+
+services:
+  kql:
+    build: apps/kql
+    ports:
+      - "8000:8000"
+    networks:
+      - net
+    depends_on:
+      - kql-cache
+    links:
+      - kql-cache
+    environment:
+      API_URL: https://placekeanu.com
+      REDIS_HOST: kql-cache
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: 81p3su28u18
+
+  kql-cache:
+    build: packages/kql-cache
+    networks:
+      - net
+    ports:
+      - "6379:6379"
